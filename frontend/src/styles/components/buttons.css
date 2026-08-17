@@ -1,0 +1,264 @@
+.btn {
+  min-height: 44px;
+  padding: 0 18px;
+
+  border: 0;
+  border-radius: var(--radius-pill);
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+
+  cursor: pointer;
+
+  transition:
+    background-color 160ms ease,
+    color 160ms ease,
+    opacity 160ms ease,
+    box-shadow 160ms ease;
+}
+
+.btn:focus-visible,
+.pagination-btn:focus-visible,
+.header-logout-btn:focus-visible,
+.admin-access-btn:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 4px var(--focus-ring);
+}
+
+.btn:active {
+  transform: none;
+}
+
+.btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.42;
+}
+
+.btn > svg,
+.pagination-btn > svg {
+  flex-shrink: 0;
+}
+
+/* Primary */
+
+.btn-primary {
+  background: var(--blue);
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background: var(--blue-hover);
+}
+
+.btn-primary:active {
+  background: var(--blue-pressed);
+}
+
+/* Secondary */
+
+.btn-outline {
+  background: var(--fill);
+  color: var(--ink);
+}
+
+.btn-outline:hover {
+  background: var(--fill-hover);
+}
+
+/* Ghost */
+
+.btn-ghost {
+  background: transparent;
+  color: var(--blue);
+}
+
+.btn-ghost:hover {
+  background: var(--fill);
+}
+
+/* Destructive */
+
+.btn-danger {
+  background: var(--red-soft);
+  color: var(--red);
+}
+
+.btn-danger:hover {
+  background: rgba(255, 59, 48, 0.14);
+}
+
+/* New contact */
+
+.new-contact-btn {
+  min-height: 38px;
+  height: 38px;
+
+  padding-inline: 16px;
+}
+
+/* Detail actions */
+
+.detail-actions {
+  position: absolute;
+  top: 32px;
+  right: 36px;
+
+  display: flex;
+  gap: 8px;
+}
+
+.detail-actions .btn {
+  min-width: 98px;
+  min-height: 38px;
+  height: 38px;
+}
+
+.detail-actions .detail-edit-btn {
+  background: var(--fill);
+  color: var(--ink);
+}
+
+.detail-actions .detail-edit-btn:hover {
+  background: var(--fill-hover);
+}
+
+.detail-actions .detail-delete-btn {
+  background: var(--red-soft);
+  color: var(--red);
+}
+
+.detail-actions .detail-delete-btn:hover {
+  background: rgba(255, 59, 48, 0.14);
+}
+
+/* Admin logout */
+
+.header-logout-btn {
+  min-height: 38px;
+  padding: 0 15px;
+
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  border-radius: var(--radius-pill);
+
+  background: rgba(255, 255, 255, 0.74);
+  color: var(--ink);
+
+  backdrop-filter: saturate(180%) blur(18px);
+  -webkit-backdrop-filter: saturate(180%) blur(18px);
+
+  box-shadow:
+    0 1px 1px rgba(0, 0, 0, 0.04),
+    0 8px 26px rgba(0, 0, 0, 0.10);
+
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  transition:
+    background-color 160ms ease,
+    box-shadow 160ms ease;
+}
+
+.header-logout-btn:hover {
+  background: rgba(255, 255, 255, 0.92);
+}
+
+.logout-icon,
+.logout-icon svg {
+  width: 17px;
+  height: 17px;
+}
+
+.logout-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logout-icon svg {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* Close */
+
+.btn-close {
+  width: 34px;
+  min-width: 34px;
+  height: 34px;
+  min-height: 34px;
+
+  padding: 0;
+
+  border-radius: 50%;
+  background: var(--fill);
+
+  color: var(--muted);
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.btn-close:hover {
+  background: var(--fill-hover);
+  color: var(--ink);
+}
+
+/* Floating admin access */
+
+.admin-access-anchor {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+
+  z-index: 50;
+}
+
+.admin-access-btn {
+  width: 38px;
+  height: 38px;
+
+  padding: 0;
+
+  border: 1px solid rgba(255, 255, 255, 0.62);
+  border-radius: 50%;
+
+  display: grid;
+  place-items: center;
+
+  background: rgba(255, 255, 255, 0.72);
+
+  backdrop-filter: saturate(180%) blur(18px);
+  -webkit-backdrop-filter: saturate(180%) blur(18px);
+
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.04),
+    0 8px 24px rgba(0, 0, 0, 0.08);
+
+  opacity: 0.72;
+
+  transition:
+    opacity 160ms ease,
+    background-color 160ms ease;
+}
+
+.admin-access-btn svg {
+  color: var(--blue);
+}
+
+.admin-access-btn:hover {
+  opacity: 1;
+  background: rgba(255, 255, 255, 0.92);
+}

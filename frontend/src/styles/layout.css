@@ -1,0 +1,97 @@
+.page-shell {
+  min-height: 100vh;
+  position: relative;
+}
+
+.page-shell::before,
+.page-shell::after {
+  display: none;
+}
+
+.app-header {
+  height: 0;
+  min-height: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  position: relative;
+  z-index: 50;
+}
+
+.app-header::before,
+.app-header::after {
+  display: none;
+}
+
+.header-actions {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+
+  display: flex;
+  align-items: center;
+
+  z-index: 60;
+}
+
+.main-area {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.directory-shell {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+
+  padding: 24px 24px 12px;
+
+  flex: 1;
+}
+
+.directory-card {
+  min-height: calc(100vh - 72px);
+
+  display: grid;
+  grid-template-columns: minmax(360px, 420px) minmax(0, 1fr);
+
+  overflow: hidden;
+
+  background: var(--panel);
+  border: 1px solid var(--border);
+
+  border-radius: var(--radius-card);
+
+  box-shadow: var(--shadow-card);
+}
+
+.directory-sidebar {
+  min-width: 0;
+
+  display: grid;
+  grid-template-rows: auto auto minmax(0, 1fr) auto;
+
+  background: rgba(248, 248, 250, 0.92);
+
+  border-right: 1px solid var(--border);
+}
+
+.contact-detail {
+  min-width: 0;
+  position: relative;
+
+  padding: 54px 52px 44px;
+
+  background: var(--panel);
+}
+
+.app-footer {
+  padding: 4px 16px 14px;
+
+  text-align: center;
+
+  color: var(--muted-light);
+  font-size: 12px;
+  font-weight: 400;
+}
